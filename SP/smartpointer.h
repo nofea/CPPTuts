@@ -1,3 +1,5 @@
+#ifndef SMARTPOINTER_H
+#define SMARTPOINTER_H
 #include <iostream>
 using namespace std;
 
@@ -14,3 +16,5 @@ class smptr
     T& operator *();
     T& operator ->();
 };
+
+#endif

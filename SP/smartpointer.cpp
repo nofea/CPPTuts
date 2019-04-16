@@ -1,5 +1,6 @@
 #include "smartpointer.h"
 
+template <class T>
 smptr::smptr(T *p)
 {
     ptr = p;
