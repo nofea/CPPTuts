@@ -44,7 +44,7 @@ RomanNumeralDictionary& RomanNumeralDictionary::operator= (RomanNumeralDictionar
     return *this;
 }
 
-int RomanNumeralDictionary::getInteger(string sRomanNumeral)
+int RomanNumeralDictionary::getInteger(string& sRomanNumeral)
 {
     int iInteger = 0;
     if(sRomanNumeral.length() == 1)
