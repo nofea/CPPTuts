@@ -24,7 +24,7 @@ int getNextPalindrome(const int& n)
         iPalin *= 10;
         iPalin += iFirstDigit;
 
-        if(iPalin < n)
+        if(iPalin <= n)
         {
             iSecondDigit = floor(iPalin/10);
             iSecondDigit = iSecondDigit % 10;
