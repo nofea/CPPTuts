@@ -1,0 +1,3 @@
+[submodule "GDCPP/godot_headers"]
+	path = GDCPP/godot_headers
+	url = https://github.com/godotengine/godot_headers.git
