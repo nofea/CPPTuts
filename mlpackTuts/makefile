@@ -13,7 +13,7 @@ INC_FLAGS := $(addprefix -I,$(INC_DIRS))
 CPPFLAGS ?= $(INC_FLAGS) $(INCLUDES) -MMD -MP
 
 # General compiler flags
-COMPILE_FLAGS = -std=c++11 -Wall -Wextra -g
+COMPILE_FLAGS = -std=c++11 -Wall -Wextra -g -fopenmp
 
 
 # Space-separated pkg-config libraries used by this project

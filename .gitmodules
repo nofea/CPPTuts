@@ -1,3 +1,9 @@
 [submodule "GDCPP/godot_headers"]
 	path = GDCPP/godot_headers
 	url = https://github.com/godotengine/godot_headers.git
+[submodule "GDCPP/godot-cpp"]
+	path = GDCPP/godot-cpp
+	url = https://github.com/godotengine/godot-cpp.git
+[submodule "GDCPP/gdnative-demos"]
+	path = GDCPP/gdnative-demos
+	url = https://github.com/godotengine/gdnative-demos.git
