@@ -1,3 +1,4 @@
 # ignore for git
 
 .vscode/
+*.out
