@@ -9,22 +9,21 @@
 class TutorialServer
 {
 private:
-    SocketInfo clientSocketInfo;
-    SocketInfo serverSocketInfo;
+    SocketCommons::SocketInfo clientSocketInfo;
+    SocketCommons::SocketInfo serverSocketInfo;
 
 public:
     TutorialServer(/* args */);
     ~TutorialServer();
-    int CreateSocket(const SocketInfo& serverSocketInfo);
+    int CreateSocket(const SocketCommons::SocketInfo& serverSocketInfo);
     void RunService(int& iClientSocketHandler);
     int ListenForClientRequest(int& iServerSocketHandler);
-    SocketInfo getClientSocketInfo();
+    SocketCommons::SocketInfo getClientSocketInfo();
     int CloseSocket(int& iSocketHandler);
     
 private:
     int SetIPAddress(int& iSocketHandler, const sockaddr_in& socketAddr);
 
 };
-
 
 #endif

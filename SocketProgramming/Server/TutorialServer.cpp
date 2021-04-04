@@ -84,6 +84,8 @@ int TutorialServer::ListenForClientRequest(int& iServerSocketHandler)
     sockaddr_in clientSocketAddr = {};
     socklen_t clientAddrLength = sizeof(clientSocketAddr);
     int iClientSocketHandler = 0;
+    clientSocketInfo.sIPAddress.resize(255);
+
     if(listen(iServerSocketHandler, SOMAXCONN) < 0)
     {
         cout << "Error while listening to socket " << iServerSocketHandler << endl;
@@ -122,12 +124,12 @@ SocketInfo TutorialServer::getClientSocketInfo()
 
 void TutorialServer::RunService(int& iClientSocket)
 {
-    string sData("");
+    char chData[255] = {'\0'};
     int iBytesReceived = 0, iBytesSent = 0;
 
     for(;;)
     {
-        iBytesReceived = recv(iClientSocket, reinterpret_cast<void*>(&sData), sizeof(string), 0);
+        iBytesReceived = recv(iClientSocket, reinterpret_cast<void*>(&chData), sizeof(string), 0);
 
         if(iBytesReceived == 0)
         {
@@ -136,8 +138,13 @@ void TutorialServer::RunService(int& iClientSocket)
         }
         else if(iBytesReceived > 0)
         {
-            iBytesSent = send(iClientSocket, sData.c_str(), iBytesReceived + 1, 0);
+            cout << "Bytes Received:" << iBytesReceived << endl;
+            cout << "Data Received:" << chData << endl;
+            iBytesSent = send(iClientSocket, chData, iBytesReceived + 1, 0);
+            cout << "Bytes sent:" << iBytesSent << endl;
         }
+
+        chData[0] = '\0';
     }
 }
 
