@@ -4,9 +4,6 @@
 [submodule "GDCPP/godot-cpp"]
 	path = GDCPP/godot-cpp
 	url = https://github.com/godotengine/godot-cpp.git
-<<<<<<< HEAD
 [submodule "GDCPP/gdnative-demos"]
 	path = GDCPP/gdnative-demos
 	url = https://github.com/godotengine/gdnative-demos.git
-=======
->>>>>>> Updated demo for GD
